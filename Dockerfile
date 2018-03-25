@@ -14,6 +14,8 @@ RUN tar -xzf elasticsearch-6.2.2.tar.gz && cd elasticsearch-6.2.2/
 
 COPY elasticsearch.yml /home/elasticsearch/elasticsearch-6.2.2/config/
 
+RUN chmod -R 777 *
+
 EXPOSE 9200
 
 EXPOSE 9300
