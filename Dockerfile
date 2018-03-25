@@ -22,7 +22,7 @@ EXPOSE 9200
 
 EXPOSE 9300
 
-ENTRYPOINT ["/home/elasticsearch/elasticsearch-6.2.2/bin/elasticsearch-plugin", install", "ingest-geoip"]
+ENTRYPOINT ["/home/elasticsearch/elasticsearch-6.2.2/bin/elasticsearch-plugin", "install", "ingest-geoip"]
 
 ENTRYPOINT ["/home/elasticsearch/elasticsearch-6.2.2/bin/elasticsearch-plugin", "install", "ingest-user-agent"]
 
