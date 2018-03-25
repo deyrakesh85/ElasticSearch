@@ -10,11 +10,13 @@ WORKDIR /home/elasticsearch
 
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.tar.gz
 
-RUN tar -xzf elasticsearch-6.2.2.tar.gz && cd elasticsearch-6.2.2/
+RUN tar -xzf elasticsearch-6.2.2.tar.gz
 
 COPY elasticsearch.yml /home/elasticsearch/elasticsearch-6.2.2/config/
 
-RUN chmod -R 777 *
+RUN mkdir data
+
+RUN chmod -R 777 data
 
 EXPOSE 9200
 
